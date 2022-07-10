@@ -5,24 +5,20 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import java.util.List;
+import javax.persistence.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@Entity(name = "users")
+@Entity
+@Table(name = "USERS")
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-
-    @Column(name = "login")
-    private String login;
+    @Column(name = "login", unique = true)
+    private int login;
     @Column(name = "password")
     private String password;
     @Column(name = "name")
@@ -30,12 +26,15 @@ public class User {
     @Column(name = "surname")
     private String surname;
     @Column(name = "phoneNumber")
-    private int phone_number;
-    @Column(name = "email")
+    private int phoneNumber;
+    @Column(name = "email", unique = true)
     private String email;
-    @Column(name = "credit")
-    private Long credit_Id;
-    @Column(name = "records")
-    private Long record_Id;
+    @Column(name = "account", unique = true)
+    private Long accountId;
+    @Column(name = "logged")
+    private boolean logged;
+
+
+
 
 }
