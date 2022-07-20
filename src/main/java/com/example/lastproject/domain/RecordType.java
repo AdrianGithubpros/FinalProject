@@ -4,7 +4,7 @@ public enum RecordType {
     CREDIT_PAYMENT,
     TRANSFER,
     CASH_IN,
-    CHAS_OUT
+    CASH_OUT
 
 
 }

@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 @Service
 public class UserMapper {
 
-    public User mapToTask(final UserDto userDto){
+    public User mapToUser(final UserDto userDto){
         return new User(
                 userDto.getId(),
                 userDto.getLogin(),

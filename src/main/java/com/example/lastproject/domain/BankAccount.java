@@ -28,7 +28,7 @@ public class BankAccount {
 
     @OneToMany(
             targetEntity = Credit.class,
-            mappedBy = "bankaccount",
+            mappedBy = " ",
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY
     )
@@ -36,7 +36,7 @@ public class BankAccount {
 
     @OneToMany(
             targetEntity = Card.class,
-            mappedBy = "bankaccount",
+            mappedBy =" ",
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY
     )
@@ -44,7 +44,7 @@ public class BankAccount {
 
     @OneToMany(
             targetEntity = Record.class,
-            mappedBy = "bankaccount",
+            mappedBy = " ",
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY
     )
